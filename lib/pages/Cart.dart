@@ -187,6 +187,105 @@ class _CartState extends State<Cart> with WidgetsBindingObserver {
     }
   }
 
+  Widget _customerDetail(IconData icon, String label, String? value) {
+    final displayValue = value?.trim();
+    return Padding(
+      padding: const EdgeInsets.only(top: 7),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, size: 18, color: Theme.of(context).colorScheme.primary),
+          const SizedBox(width: 8),
+          SizedBox(
+            width: 78,
+            child: Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ),
+          Expanded(
+            child: Text(
+              displayValue == null || displayValue.isEmpty
+                  ? 'Não informado'
+                  : displayValue,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _customerCard(model.Cart item) {
+    final scheme = Theme.of(context).colorScheme;
+    final customerName = item.userName?.trim();
+    final initial = customerName == null || customerName.isEmpty
+        ? '?'
+        : customerName.substring(0, 1).toUpperCase();
+
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: scheme.secondaryContainer.withOpacity(0.55),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: scheme.primary.withOpacity(0.18)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundColor: scheme.primary,
+                foregroundColor: scheme.onPrimary,
+                child: Text(
+                  initial,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'PEDIDO DE',
+                      style: TextStyle(
+                        color: scheme.primary,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.1,
+                      ),
+                    ),
+                    Text(
+                      customerName?.isNotEmpty == true
+                          ? customerName!
+                          : 'Cliente sem nome',
+                      style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(Icons.local_mall_outlined, color: scheme.primary),
+            ],
+          ),
+          const Divider(height: 20),
+          _customerDetail(Icons.phone_outlined, 'Telefone', item.userPhone),
+          _customerDetail(Icons.home_outlined, 'Endereço', item.userAddress),
+          _customerDetail(Icons.pin_drop_outlined, 'Número', item.userNum),
+          _customerDetail(
+            Icons.location_city_outlined,
+            'Bairro',
+            item.userNeighborhood,
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _cartItem(model.Cart item, CartStore store) {
     final product = item.product;
     final image = product?.image ?? '';
@@ -232,10 +331,7 @@ class _CartState extends State<Cart> with WidgetsBindingObserver {
                   Text(
                     'Status: ${_statuses[item.status] ?? item.status ?? '—'}',
                   ),
-                  if (widget.isAdmin && item.userName != null)
-                    Text('Cliente: ${item.userName}'),
-                  if (widget.isAdmin && item.userEmail != null)
-                    Text(item.userEmail!),
+                  if (widget.isAdmin) _customerCard(item),
                   const SizedBox(height: 6),
                   Text(
                     'R\$ ${(product?.price ?? 0).toStringAsFixed(2).replaceAll('.', ',')}',

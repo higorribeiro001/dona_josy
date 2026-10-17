@@ -9,6 +9,9 @@ class Cart {
   final String? userName;
   final String? userEmail;
   final String? userPhone;
+  final String? userAddress;
+  final String? userNum;
+  final String? userNeighborhood;
 
   Cart({
     required this.id,
@@ -19,6 +22,9 @@ class Cart {
     this.userName,
     this.userEmail,
     this.userPhone,
+    this.userAddress,
+    this.userNum,
+    this.userNeighborhood,
   });
 
   factory Cart.fromJson(Map<String, dynamic> json) {
@@ -41,6 +47,15 @@ class Cart {
       userPhone: userJson is Map<String, dynamic>
           ? userJson['phone'] as String?
           : null,
+      userAddress: userJson is Map<String, dynamic>
+          ? userJson['address']?.toString()
+          : null,
+      userNum: userJson is Map<String, dynamic>
+          ? userJson['num']?.toString()
+          : null,
+      userNeighborhood: userJson is Map<String, dynamic>
+          ? userJson['neighborhood']?.toString()
+          : null,
     );
   }
 
@@ -54,6 +69,12 @@ class Cart {
       'status': status,
       'created_at': created_at,
       'updated_at': updated_at,
+      'userName': userName,
+      'userEmail': userEmail,
+      'userPhone': userPhone,
+      'userAddress': userAddress,
+      'userNum': userNum,
+      'userNeighborhood': userNeighborhood,
     };
   }
 }
