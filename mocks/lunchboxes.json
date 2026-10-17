@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "name": "MARMITA DE FRANGO",
+        "image": "https://controlenamao.com.br/blog/wp-content/uploads/2025/02/O-segredo-de-uma-marmitaria-de-sucesso_-uma-gestao-eficiente.webp",
+        "price": 9.99,
+        "description": "A vibrant red lipstick that lasts all day.",
+        "is_active": true,
+        "created_at": "2024-06-01T12:00:00Z",
+        "updated_at": "2024-06-01T12:00:00Z"
+    },
+    {
+        "id": "2",
+        "name": "MARMITA DE CARNE SECA",
+        "image": "https://controlenamao.com.br/blog/wp-content/uploads/2025/02/O-segredo-de-uma-marmitaria-de-sucesso_-uma-gestao-eficiente.webp",
+        "price": 9.99,
+        "description": "A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day.",
+        "is_active": true,
+        "created_at": "2024-06-01T12:00:00Z",
+        "updated_at": "2024-06-01T12:00:00Z"
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "id": "1",
+        "name": "KAIAK",
+        "image": "https://production.na01.natura.com/dw/image/v2/BFKR_PRD/on/demandware.static/-/Sites-natura-br-storefront-catalog/default/dwb1fbb1ef/Produtos/NATBRA-108400_2.jpg?sw=300&q=80",
+        "mark": "Natura",
+        "price": 9.99,
+        "description": "A vibrant red lipstick that lasts all day.",
+        "is_active": true,
+        "paid": true,
+        "status": "Entregue",
+        "created_at": "2024-06-01T12:00:00Z",
+        "updated_at": "2024-06-01T12:00:00Z"
+    },
+    {
+        "id": "2",
+        "name": "ESSENCIAL",
+        "image": "https://i.zst.com.br/thumbs/12/b/36/-1158317409.jpg",
+        "mark": "Natura",
+        "price": 9.99,
+        "description": "A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day. A vibrant red lipstick that lasts all day.",
+        "is_active": true,
+        "status": "Em andamento",
+        "paid": false,
+        "created_at": "2024-06-01T12:00:00Z",
+        "updated_at": "2024-06-01T12:00:00Z"
+    }
+]
