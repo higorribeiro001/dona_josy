@@ -144,4 +144,12 @@ mocks/              # Dados de exemplo
 
 ---
 
-Desenvolvido com 💗 para **Dona Josy**.
+<img width="718" height="1599" alt="WhatsApp Image 2026-10-17 at 13 32 54" src="https://github.com/user-attachments/assets/ee4249cc-5425-48a6-a3ed-f77bd9b30098" />
+
+<img width="718" height="1599" alt="WhatsApp Image 2026-10-17 at 13 32 54 (1)" src="https://github.com/user-attachments/assets/14ef5740-c189-44b3-9e3c-65f430973f81" />
+
+<img width="718" height="1599" alt="WhatsApp Image 2026-10-17 at 13 32 54 (2)" src="https://github.com/user-attachments/assets/fa2043a7-d848-4b54-b10a-a042fb137432" />
+
+<img width="718" height="1599" alt="WhatsApp Image 2026-10-17 at 13 32 55" src="https://github.com/user-attachments/assets/925109bd-e45f-4342-be3e-a0bea5b92c7a" />
+
+<img width="718" height="1599" alt="WhatsApp Image 2026-10-17 at 13 32 55 (1)" src="https://github.com/user-attachments/assets/e9cdb2a3-e6f3-4b06-9fac-1669ca5c7c11" />
